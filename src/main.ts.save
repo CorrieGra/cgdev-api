@@ -11,14 +11,14 @@ async function bootstrap() {
   app.use(cookie_parser(process.env.APP_DEFAULT_COOKIE_SECRET));
 
   app.use((request, response, next) => {
-    response.header('Access-Control-Allow-Origin', '*');
+    response.header('Access-Control-Allow-Origin', '');
     response.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
     response.header('Access-Control-Allow-Headers', 'Content-Type, Accept');
     next();
   });
 
   app.enableCors({
-    origin: 'https://cgdev.dev-test.org.za',
+    origin: 'http://localhost:3000',
     credentials: true
   });
 

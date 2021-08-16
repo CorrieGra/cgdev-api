@@ -59,7 +59,7 @@ export class UserService {
           message: 'User Created!'
         };
       } else {
-        throw new InternalServerErrorException({
+          return new InternalServerErrorException({
           status: HttpStatus.INTERNAL_SERVER_ERROR,
           message: "Something went wrong, please call your database administrators."
         });

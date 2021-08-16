@@ -1,3 +1,4 @@
+
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable prettier/prettier */
 import { NestFactory } from '@nestjs/core';
@@ -18,7 +19,7 @@ async function bootstrap() {
   });
 
   app.enableCors({
-    origin: 'https://cgdev.dev-test.org.za',
+    origin: 'http://localhost:3000',
     credentials: true
   });
 

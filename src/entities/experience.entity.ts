@@ -2,12 +2,12 @@
 import { 
     Entity,
     Column,
-    PrimaryColumn,
+    PrimaryGeneratedColumn,
  } from 'typeorm';
 
  @Entity('Experience')
  export class ExperienceEntity {
-    @PrimaryColumn()
+    @PrimaryGeneratedColumn()
     experience_id: number;
 
     @Column()

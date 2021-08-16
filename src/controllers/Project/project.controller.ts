@@ -41,10 +41,10 @@ export class ProjectController {
         @Body('project_website_url') project_website_url: string,
         @Body('project_repo_url') project_repo_url: string
         ) {
-            const project_hero = `https://dev-test.org.za/${files['project_hero'][0].path.replace('\\', '/')}`;
+            const project_hero = `https://dev-test.org.za/${files['project_hero'][0].filename}`;
             const project_slices = JSON.stringify({
-               project_slice_1: `https://dev-test.org.za/${files['project_slice_1'][0].path.replace('\\', '/')}`,
-               project_slice_2: `https://dev-test.org.za/${files['project_slice_2'][0].path.replace('\\', '/')}`, 
+               project_slice_1: `https://dev-test.org.za/${files['project_slice_1'][0].filename}`,
+               project_slice_2: `https://dev-test.org.za/${files['project_slice_2'][0].filename}`, 
             });
             
             const project_details = {

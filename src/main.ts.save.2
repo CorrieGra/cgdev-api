@@ -3,7 +3,7 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import * as cookie_parser from 'cookie-parser';
-
+import { }
 require('dotenv').config();
 
 async function bootstrap() {
@@ -18,7 +18,7 @@ async function bootstrap() {
   });
 
   app.enableCors({
-    origin: 'https://cgdev.dev-test.org.za',
+    origin: 'http://cgdev.dev-test.org.za',
     credentials: true
   });
 

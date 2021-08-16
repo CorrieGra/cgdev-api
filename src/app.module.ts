@@ -6,7 +6,7 @@ import { UserModule } from '@controllers/User/user.module';
 import { ExperienceEntity } from '@entities/experience.entity';
 import { ProjectEntity } from '@entities/project.entity';
 import { UserEntity } from '@entities/user.entity';
-import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
+import { MiddlewareConsumer, Module, NestModule, RequestMethod } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Connection } from 'typeorm';
 import { AuthMiddleware } from './middleware/auth.middleware';
@@ -43,6 +43,6 @@ export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
     consumer
       .apply(AuthMiddleware)
-      .forRoutes('api/project', 'api/education');
+      .forRoutes({ path: 'api/projects', method: RequestMethod.POST }, { path: 'api/experience', method: RequestMethod.POST });
   }
 }

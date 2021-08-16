@@ -2,12 +2,12 @@
 import { 
     Entity,
     Column,
-    PrimaryColumn,
+    PrimaryGeneratedColumn,
  } from 'typeorm';
 
  @Entity('Projects')
  export class ProjectEntity {
-     @PrimaryColumn()
+     @PrimaryGeneratedColumn()
      project_id: number;
 
      @Column()
