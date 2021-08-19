@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable prettier/prettier */
+import { EmailModule } from '@controllers/Email/Email.module';
 import { ExperienceModule } from '@controllers/Experience/experience.module';
 import { ProjectModule } from '@controllers/Project/project.module';
 import { UserModule } from '@controllers/User/user.module';
@@ -18,6 +19,7 @@ require('dotenv').config();
     UserModule,
     ProjectModule,
     ExperienceModule,
+    EmailModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: process.env.POSTGRES_HOST,
