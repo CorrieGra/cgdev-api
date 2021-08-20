@@ -18,7 +18,7 @@ async function bootstrap() {
   });
 
   app.enableCors({
-    origin: 'https://cgdev.dev-test.org.za',
+    origin: process.env.CORS_ENVIRONTMENT_ORIGIN,
     credentials: true
   });
 
